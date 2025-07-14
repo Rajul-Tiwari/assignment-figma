@@ -51,7 +51,7 @@ const pieData = {
 
 export default function AppealLetterPage() {
   return (
-    <div className="px-8 md:px-16 lg:px-24 w-full mx-auto">
+    <div className="px-8 md:px-16 lg:px-24 mt-8 w-full mx-auto">
       
       {/* Dashboard Graphs Section */}
       <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -64,7 +64,7 @@ export default function AppealLetterPage() {
           <Pie data={pieData} />
         </div>
       </div>
-      <AppealLetterTable />
+    
     </div>
   );
 }

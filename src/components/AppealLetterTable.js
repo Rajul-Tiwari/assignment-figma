@@ -82,17 +82,17 @@ export default function AppealLetterTable() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-x-auto p-6 md:p-8">
+    <div className="bg-white rounded-2xl shadow-lg overflow-x-auto p-6 md:p-0 2xl:p-0">
         <div className="flex justify-end mb-4 gap-3">
           <input
             type="text"
             placeholder="Search by Property, Jurisdiction, Parcel Number or Client"
-            className="px-5 py-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#2ED6A1] w-80 md:w-96 bg-white"
+            className="px-5 2xl:py-4 h-10 2xl:h-10 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#2ED6A1] w-80 md:w-96 bg-white"
             value={searchText}
             onChange={e => setSearchText(e.target.value)}
           />
           <button className="p-2 px-4 border border-gray-300 rounded-lg bg-white hover:bg-[#2ED6A1] hover:text-[#22314F] transition"><PiSlidersDuotone /></button>
-          <button className="p-2 h-12 w-12 border bg-gray-200 border-gray-300 rounded-full  hover:bg-[#2ED6A1] hover:text-[#22314F] transition"><IoEllipsisVerticalSharp /></button>
+          <button className="p-2 2xl:h-10 2xl:w-10 border bg-gray-200 border-gray-300 rounded-full  hover:bg-[#2ED6A1] hover:text-[#22314F] transition"><IoEllipsisVerticalSharp /></button>
         </div>
       <div className="overflow-x-auto">
         <table className="text-[#22314F] w-full " style={{ tableLayout: 'fixed' }}>
@@ -111,11 +111,11 @@ export default function AppealLetterTable() {
             <col style={{ width: '260px' }} />
           </colgroup>
           <thead>
-            <tr className="bg-[#e9f0f7] text-[#22314F] text-sm ">
+            <tr className="bg-[#e9f0f7] text-[#22314F] text-sm  ">
               <th className="p-4 font-semibold text-left whitespace-nowrap">
                 <input
                   type="checkbox"
-                  className="w-5 h-5 accent-[#2ED6A1] rounded-2xl"
+                  className="2xl:w-4 2xl:h-4 h-3 w-3 accent-[#2ED6A1] rounded-2xl"
                   checked={allSelected}
                   onChange={handleSelectAll}
                   indeterminate={selectedRows.length > 0 && !allSelected ? "indeterminate" : undefined}
@@ -141,22 +141,22 @@ export default function AppealLetterTable() {
                 <td className="p-4">
                   <input
                     type="checkbox"
-                    className="w-5 h-5 accent-[#2ED6A1] rounded-2xl"
+                    className="2xl:w-4 2xl:h-4 h-3 w-3 accent-[#2ED6A1] rounded-2xl"
                     checked={selectedRows.includes(idx)}
                     onChange={() => handleRowSelect(idx)}
                   />
                 </td>
-                <td className="p-4 text-sm font-semibold">{row.year}</td>
-                <td className="p-4 text-sm font-semibold whitespace-nowrap overflow-hidden text-ellipsis" style={{ maxWidth: '200px' }}>{row.company}</td>
-                <td className="p-4 text-sm font-semibold">{row.state}</td>
-                <td className="p-4 text-sm font-semibold whitespace-nowrap overflow-hidden text-ellipsis" style={{ maxWidth: '300px' }}>{row.assessor}</td>
-                <td className="p-4 text-sm font-semibold">{row.account}</td>
-                <td className="p-4 text-sm font-semibold">{row.appealedDeadline || row.appealed}</td>
-                <td className="p-4 text-sm font-semibold">{row.status}</td>
-                <td className="p-4 text-sm font-semibold">{row.appealedDate}</td>
-                <td className="p-4 text-sm font-semibold">{row.appealedBy}</td>
-                <td className="p-4 text-sm font-semibold">{row.appealed}</td>
-                <td className="p-4 relative">
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold">{row.year}</td>
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold whitespace-nowrap overflow-hidden text-ellipsis" style={{ maxWidth: '200px' }}>{row.company}</td>
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold">{row.state}</td>
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold whitespace-nowrap overflow-hidden text-ellipsis" style={{ maxWidth: '300px' }}>{row.assessor}</td>
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold">{row.account}</td>
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold">{row.appealedDeadline || row.appealed}</td>
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold">{row.status}</td>
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold">{row.appealedDate}</td>
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold">{row.appealedBy}</td>
+                <td className="2xl:p-3 p-3.5 2xl:text-sm text-xs font-semibold">{row.appealed}</td>
+                <td className="2xl:p-3 p-3.5 relative">
                   <button
                     className="p-2 rounded-full hover:bg-gray-200 focus:outline-none"
                     onClick={() => setOpenActionIdx(openActionIdx === idx ? null : idx)}
@@ -183,7 +183,7 @@ export default function AppealLetterTable() {
       {/* Custom horizontal scrollbar below the table */}
     
       {/* Pagination */}
-      <div className="flex items-center justify-between p-2 bg-[#f6f7f8] rounded-xl mt-4 shadow-sm text-sm">
+      <div className="flex items-center justify-between p-2 bg-[#f6f7f8] rounded-xl 2xl:mt-4 mt-2 shadow-sm text-sm">
         <span className="text-gray-400 ml-4">1-10 of 120</span>
         <div className="flex items-center gap-6">
           <button className="px-3 py-1.5 flex items-center gap-1  hover:text-[#22314F] font-medium rounded transition disabled:opacity-50" disabled>
