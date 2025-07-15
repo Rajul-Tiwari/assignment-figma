@@ -93,7 +93,7 @@ export default function AppealLetterTable() {
             onChange={e => setSearchText(e.target.value)}
           />
           <button className="p-2 px-4 border border-gray-300 rounded-lg bg-white hover:bg-[#2ED6A1] hover:text-[#22314F] transition"><PiSlidersDuotone /></button>
-          <button className="p-2 2xl:h-16 2xl:w-16 border bg-gray-200 border-gray-300 rounded-full  hover:bg-[#2ED6A1] hover:text-[#22314F] transition"><IoEllipsisVerticalSharp /></button>
+          <div className="flex items-center justify-center p-2 2xl:h-16 2xl:w-16 border bg-gray-200 border-gray-300 rounded-full hover:bg-[#2ED6A1] hover:text-[#22314F] transition"><IoEllipsisVerticalSharp /></div>
         </div>
       <div className="overflow-x-auto">
         <table className="text-[#22314F] w-full " style={{ tableLayout: 'fixed' }}>
