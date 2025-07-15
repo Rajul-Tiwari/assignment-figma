@@ -84,7 +84,7 @@ export default function AppealLetterTable() {
 
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-x-auto p-6 md:p-0 2xl:p-0">
-        <div className="flex justify-end mb-4 2xl:mb-8 gap-3">
+        <div className="flex justify-end mb-4 2xl:mb-4 gap-3">
           <input
             type="text"
             placeholder="Search by Property, Jurisdiction, Parcel Number or Client"
